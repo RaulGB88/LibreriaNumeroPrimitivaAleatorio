@@ -16,7 +16,7 @@ public class NumeroPrimitiva {
     //Instanciación del método Random.
     public static final Random RND = new Random(System.currentTimeMillis());
     //Instanciación del Array que contiene los números que forman el boleto de la Primitiva.
-    public static final int NUMERO_PAPELETA[] = new int[5];
+    public static int[] numeroPapeleta = new int[5];
 
     //Obtiene un número aleatorio.
     public static int obtenerNumero(int n1, int n2) {
@@ -31,8 +31,8 @@ public class NumeroPrimitiva {
 
         for (int veces = 0; veces < vecesMax; veces++) {
 
-            NUMERO_PAPELETA[veces] = obtenerNumero(n1, n2);
-            //System.out.println(NUMERO_PAPELETA[veces]);
+            numeroPapeleta[veces] = obtenerNumero(n1, n2);
+            //System.out.println(numeroPapeleta[veces]);
         }
     }
 
@@ -40,7 +40,7 @@ public class NumeroPrimitiva {
     public static void mensajePrimitiva(int n1, int n2, int vecesMax) {
 
         repetirNumero(n1, n2, vecesMax);
-        System.out.printf("Numero de la Primitiva....: %d-%d-%d-%d-%d", NUMERO_PAPELETA[0], NUMERO_PAPELETA[1], NUMERO_PAPELETA[2], NUMERO_PAPELETA[3], NUMERO_PAPELETA[4]);
+        System.out.printf("Numero de la Primitiva....: %d-%d-%d-%d-%d", numeroPapeleta[0], numeroPapeleta[1], numeroPapeleta[2], numeroPapeleta[3], numeroPapeleta[4]);
     }
 
 }
